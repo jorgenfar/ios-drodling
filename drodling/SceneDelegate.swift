@@ -11,7 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = ViewController()
+        window?.rootViewController = createRootViewController()
         window?.makeKeyAndVisible()
     }
 
@@ -41,5 +41,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+
+    private func createRootViewController() -> UIViewController {
+        let provider = PersonProvider()
+        let viewModel = ViewModel(personProvider: provider)
+        return ViewController(viewModel: viewModel)
     }
 }

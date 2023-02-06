@@ -12,12 +12,11 @@
 		493FBC6427C4598100F0B245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FBC6327C4598100F0B245 /* ViewController.swift */; };
 		493FBC6927C4598100F0B245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 493FBC6827C4598100F0B245 /* Assets.xcassets */; };
 		493FBC6C27C4598100F0B245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493FBC6A27C4598100F0B245 /* LaunchScreen.storyboard */; };
-		493FBC7727C4598100F0B245 /* drodlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FBC7627C4598100F0B245 /* drodlingTests.swift */; };
-		493FBC8127C4598100F0B245 /* drodlingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FBC8027C4598100F0B245 /* drodlingUITests.swift */; };
-		493FBC8327C4598100F0B245 /* drodlingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FBC8227C4598100F0B245 /* drodlingUITestsLaunchTests.swift */; };
-		493FBC9027C45A2700F0B245 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FBC8F27C45A2700F0B245 /* Extensions.swift */; };
-		493FBC9227C45A2F00F0B245 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FBC9127C45A2F00F0B245 /* ProgressView.swift */; };
-		493FBC9527C45A7900F0B245 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 493FBC9427C45A7900F0B245 /* SnapKit */; };
+		4989CF6D29906A16003CF914 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989CF6C29906A16003CF914 /* ViewModel.swift */; };
+		4989CF6F29906AC7003CF914 /* PersonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989CF6E29906AC7003CF914 /* PersonProvider.swift */; };
+		4989CF7129906B52003CF914 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989CF7029906B52003CF914 /* Person.swift */; };
+		4989CF7329906C67003CF914 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989CF7229906C67003CF914 /* Extensions.swift */; };
+		49E396C7294788FD00A1FA69 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 49E396C6294788FD00A1FA69 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,12 +45,11 @@
 		493FBC6B27C4598100F0B245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		493FBC6D27C4598100F0B245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		493FBC7227C4598100F0B245 /* drodlingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = drodlingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		493FBC7627C4598100F0B245 /* drodlingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drodlingTests.swift; sourceTree = "<group>"; };
 		493FBC7C27C4598100F0B245 /* drodlingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = drodlingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		493FBC8027C4598100F0B245 /* drodlingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drodlingUITests.swift; sourceTree = "<group>"; };
-		493FBC8227C4598100F0B245 /* drodlingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drodlingUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		493FBC8F27C45A2700F0B245 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		493FBC9127C45A2F00F0B245 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		4989CF6C29906A16003CF914 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4989CF6E29906AC7003CF914 /* PersonProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonProvider.swift; sourceTree = "<group>"; };
+		4989CF7029906B52003CF914 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		4989CF7229906C67003CF914 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				493FBC9527C45A7900F0B245 /* SnapKit in Frameworks */,
+				49E396C7294788FD00A1FA69 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				493FBC5E27C4598000F0B245 /* drodling */,
-				493FBC7527C4598100F0B245 /* drodlingTests */,
-				493FBC7F27C4598100F0B245 /* drodlingUITests */,
 				493FBC5D27C4598000F0B245 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,32 +100,17 @@
 			isa = PBXGroup;
 			children = (
 				493FBC5F27C4598000F0B245 /* AppDelegate.swift */,
-				493FBC8F27C45A2700F0B245 /* Extensions.swift */,
-				493FBC9127C45A2F00F0B245 /* ProgressView.swift */,
 				493FBC6127C4598000F0B245 /* SceneDelegate.swift */,
 				493FBC6327C4598100F0B245 /* ViewController.swift */,
+				4989CF6C29906A16003CF914 /* ViewModel.swift */,
+				4989CF6E29906AC7003CF914 /* PersonProvider.swift */,
+				4989CF7029906B52003CF914 /* Person.swift */,
+				4989CF7229906C67003CF914 /* Extensions.swift */,
 				493FBC6827C4598100F0B245 /* Assets.xcassets */,
 				493FBC6A27C4598100F0B245 /* LaunchScreen.storyboard */,
 				493FBC6D27C4598100F0B245 /* Info.plist */,
 			);
 			path = drodling;
-			sourceTree = "<group>";
-		};
-		493FBC7527C4598100F0B245 /* drodlingTests */ = {
-			isa = PBXGroup;
-			children = (
-				493FBC7627C4598100F0B245 /* drodlingTests.swift */,
-			);
-			path = drodlingTests;
-			sourceTree = "<group>";
-		};
-		493FBC7F27C4598100F0B245 /* drodlingUITests */ = {
-			isa = PBXGroup;
-			children = (
-				493FBC8027C4598100F0B245 /* drodlingUITests.swift */,
-				493FBC8227C4598100F0B245 /* drodlingUITestsLaunchTests.swift */,
-			);
-			path = drodlingUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +130,7 @@
 			);
 			name = drodling;
 			packageProductDependencies = (
-				493FBC9427C45A7900F0B245 /* SnapKit */,
+				49E396C6294788FD00A1FA69 /* SnapKit */,
 			);
 			productName = drodling;
 			productReference = 493FBC5C27C4598000F0B245 /* drodling.app */;
@@ -224,7 +205,7 @@
 			);
 			mainGroup = 493FBC5327C4598000F0B245;
 			packageReferences = (
-				493FBC9327C45A7900F0B245 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				49E396C5294788FD00A1FA69 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 493FBC5D27C4598000F0B245 /* Products */;
 			projectDirPath = "";
@@ -268,11 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4989CF7129906B52003CF914 /* Person.swift in Sources */,
 				493FBC6427C4598100F0B245 /* ViewController.swift in Sources */,
 				493FBC6027C4598000F0B245 /* AppDelegate.swift in Sources */,
-				493FBC9227C45A2F00F0B245 /* ProgressView.swift in Sources */,
+				4989CF6D29906A16003CF914 /* ViewModel.swift in Sources */,
+				4989CF6F29906AC7003CF914 /* PersonProvider.swift in Sources */,
 				493FBC6227C4598000F0B245 /* SceneDelegate.swift in Sources */,
-				493FBC9027C45A2700F0B245 /* Extensions.swift in Sources */,
+				4989CF7329906C67003CF914 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				493FBC7727C4598100F0B245 /* drodlingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,8 +270,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				493FBC8327C4598100F0B245 /* drodlingUITestsLaunchTests.swift in Sources */,
-				493FBC8127C4598100F0B245 /* drodlingUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,13 +423,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 97U3N66TBS;
+				DEVELOPMENT_TEAM = BKHY6HJMG8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = drodling/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,13 +451,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 97U3N66TBS;
+				DEVELOPMENT_TEAM = BKHY6HJMG8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = drodling/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -608,20 +590,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		493FBC9327C45A7900F0B245 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		49E396C5294788FD00A1FA69 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
-				branch = develop;
-				kind = branch;
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		493FBC9427C45A7900F0B245 /* SnapKit */ = {
+		49E396C6294788FD00A1FA69 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 493FBC9327C45A7900F0B245 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 49E396C5294788FD00A1FA69 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

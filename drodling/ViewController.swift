@@ -2,52 +2,81 @@ import UIKit
 import SnapKit
 
 final class ViewController: UIViewController {
+    private let viewModel: ViewModel
 
-    var timer: Timer?
-    var progress: CGFloat = 0
-
-    private let testView: ProgressView = {
-        let view = ProgressView()
-        view.backgroundColor = .clear
-        return view
+    private let label: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        return label
     }()
+
+    private let button: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Refresh Person", for: .normal)
+        return button
+    }()
+
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
-
+        subscribeToViewModel()
         addViews()
         addConstraints()
-
-        Timer.scheduledTimer(
-            timeInterval: 0.1,
-            target: self,
-            selector: #selector(updateProgress),
-            userInfo: nil,
-            repeats: true
-        )
+        addTargets()
     }
 
     private func addViews() {
-        view.addSubview(testView)
+        view.addSubview(label)
+        view.addSubview(button)
     }
 
     private func addConstraints() {
-        testView.snp.makeConstraints { make in
-            make.height.width.equalTo(200)
+        label.snp.makeConstraints { make in
             make.center.equalToSuperview()
+        }
+
+        button.snp.makeConstraints { make in
+            make.top.equalTo(label.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
         }
     }
 
-    @objc private func updateProgress() {
-        let diff = CGFloat(Float.random(in: 0..<0.01))
-        let sum = progress + diff
-        if sum < 1 {
-            progress = sum
-            testView.state = ProgressView.State(progress: progress)
-        } else {
-            timer?.invalidate()
+    private func addTargets() {
+        button.addAsyncAction { [weak self] in
+            await self?.viewModel.loadPerson()
+        }
+    }
+}
+
+extension ViewController {
+    private func subscribeToViewModel() {
+        Task {
+            for await event in viewModel.subscribe() {
+                switch event {
+                case .setState(let state):
+                    switch state {
+                    case .content(let person):
+                        label.text = person.name
+                    case .error(_):
+                        label.text = "Failed to load person"
+                    case .loading:
+                        label.text = "Loading..."
+                    }
+                case .showAlert:
+                    break
+                case .dismiss:
+                    break
+                }
+            }
         }
     }
 }
