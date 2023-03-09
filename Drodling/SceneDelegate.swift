@@ -45,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private func createRootViewController() -> UIViewController {
         let provider = PersonProvider()
-        let viewModel = ViewModel(personProvider: provider)
-        return ViewController(viewModel: viewModel)
+        let viewModel = PeopleViewModel(personProvider: provider)
+        return PeopleViewController(viewModel: viewModel)
     }
 }

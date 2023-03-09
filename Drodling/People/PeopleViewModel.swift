@@ -7,7 +7,7 @@
 
 import Foundation
 
-@MainActor final class ViewModel {
+@MainActor final class PeopleViewModel {
     enum Event {
         enum State {
             case content(Person)
@@ -20,11 +20,11 @@ import Foundation
         case dismiss
     }
 
-    private let personProvider: PersonProviderProtocol
+    private let personProvider: PersonProviding
 
-    private var continuation: AsyncStream<ViewModel.Event>.Continuation?
+    private var continuation: AsyncStream<PeopleViewModel.Event>.Continuation?
 
-    init(personProvider: PersonProviderProtocol) {
+    init(personProvider: PersonProviding) {
         self.personProvider = personProvider
     }
 
@@ -39,6 +39,7 @@ import Foundation
         do {
             let id = Int.random(in: 0..<100)
             let person = try await personProvider.getPerson(for: id)
+            try await Task.sleep(for: .milliseconds(500))
             continuation?.yield(.setState(.content(person)))
         } catch {
             continuation?.yield(.setState(.error(error)))

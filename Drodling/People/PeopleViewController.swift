@@ -1,14 +1,10 @@
 import UIKit
-import SnapKit
+import TinyConstraints
 
-final class ViewController: UIViewController {
-    private let viewModel: ViewModel
+final class PeopleViewController: UIViewController {
+    private let viewModel: PeopleViewModel
 
-    private let label: UILabel = {
-        let label = UILabel()
-        label.textColor = .white
-        return label
-    }()
+    private let card = PersonCard()
 
     private let button: UIButton = {
         let button = UIButton(type: .system)
@@ -16,7 +12,7 @@ final class ViewController: UIViewController {
         return button
     }()
 
-    init(viewModel: ViewModel) {
+    init(viewModel: PeopleViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -35,29 +31,25 @@ final class ViewController: UIViewController {
     }
 
     private func addViews() {
-        view.addSubview(label)
+        view.addSubview(card)
         view.addSubview(button)
     }
 
     private func addConstraints() {
-        label.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-        }
-
-        button.snp.makeConstraints { make in
-            make.top.equalTo(label.snp.bottom).offset(20)
-            make.centerX.equalToSuperview()
-        }
+        card.center(in: view)
+        
+        button.topToBottom(of: card, offset: 20)
+        button.centerXToSuperview()
     }
 
     private func addTargets() {
-        button.addAsyncAction { [weak self] in
+        button.addAction { [weak self] in
             await self?.viewModel.loadPerson()
         }
     }
 }
 
-extension ViewController {
+extension PeopleViewController {
     private func subscribeToViewModel() {
         Task {
             for await event in viewModel.subscribe() {
@@ -65,11 +57,11 @@ extension ViewController {
                 case .setState(let state):
                     switch state {
                     case .content(let person):
-                        label.text = person.name
+                        card.set(person: person)
                     case .error(_):
-                        label.text = "Failed to load person"
+                        break
                     case .loading:
-                        label.text = "Loading..."
+                        card.set(person: nil)
                     }
                 case .showAlert:
                     break

@@ -9,14 +9,18 @@
 /* Begin PBXBuildFile section */
 		493FBC6027C4598000F0B245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FBC5F27C4598000F0B245 /* AppDelegate.swift */; };
 		493FBC6227C4598000F0B245 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FBC6127C4598000F0B245 /* SceneDelegate.swift */; };
-		493FBC6427C4598100F0B245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FBC6327C4598100F0B245 /* ViewController.swift */; };
+		493FBC6427C4598100F0B245 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FBC6327C4598100F0B245 /* PeopleViewController.swift */; };
 		493FBC6927C4598100F0B245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 493FBC6827C4598100F0B245 /* Assets.xcassets */; };
 		493FBC6C27C4598100F0B245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493FBC6A27C4598100F0B245 /* LaunchScreen.storyboard */; };
-		4989CF6D29906A16003CF914 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989CF6C29906A16003CF914 /* ViewModel.swift */; };
+		4989CF6D29906A16003CF914 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989CF6C29906A16003CF914 /* PeopleViewModel.swift */; };
 		4989CF6F29906AC7003CF914 /* PersonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989CF6E29906AC7003CF914 /* PersonProvider.swift */; };
 		4989CF7129906B52003CF914 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989CF7029906B52003CF914 /* Person.swift */; };
 		4989CF7329906C67003CF914 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4989CF7229906C67003CF914 /* Extensions.swift */; };
 		49E396C7294788FD00A1FA69 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 49E396C6294788FD00A1FA69 /* SnapKit */; };
+		81C3BD4B29BA82C70083F008 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 81C3BD4A29BA82C70083F008 /* TinyConstraints */; };
+		81C3BD6B29BA854F0083F008 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C3BD6A29BA854F0083F008 /* Request.swift */; };
+		81C3BD6E29BA8A550083F008 /* PersonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C3BD6D29BA8A550083F008 /* PersonCard.swift */; };
+		81C3BD7129BA94C50083F008 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 81C3BD7029BA94C50083F008 /* SkeletonView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,16 +44,18 @@
 		493FBC5C27C4598000F0B245 /* drodling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drodling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		493FBC5F27C4598000F0B245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		493FBC6127C4598000F0B245 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		493FBC6327C4598100F0B245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		493FBC6327C4598100F0B245 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		493FBC6827C4598100F0B245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		493FBC6B27C4598100F0B245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		493FBC6D27C4598100F0B245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		493FBC7227C4598100F0B245 /* drodlingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = drodlingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		493FBC7C27C4598100F0B245 /* drodlingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = drodlingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4989CF6C29906A16003CF914 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4989CF6C29906A16003CF914 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		4989CF6E29906AC7003CF914 /* PersonProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonProvider.swift; sourceTree = "<group>"; };
 		4989CF7029906B52003CF914 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		4989CF7229906C67003CF914 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		81C3BD6A29BA854F0083F008 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		81C3BD6D29BA8A550083F008 /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E396C7294788FD00A1FA69 /* SnapKit in Frameworks */,
+				81C3BD7129BA94C50083F008 /* SkeletonView in Frameworks */,
+				81C3BD4B29BA82C70083F008 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +89,7 @@
 		493FBC5327C4598000F0B245 = {
 			isa = PBXGroup;
 			children = (
-				493FBC5E27C4598000F0B245 /* drodling */,
+				493FBC5E27C4598000F0B245 /* Drodling */,
 				493FBC5D27C4598000F0B245 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,21 +104,55 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		493FBC5E27C4598000F0B245 /* drodling */ = {
+		493FBC5E27C4598000F0B245 /* Drodling */ = {
 			isa = PBXGroup;
 			children = (
+				81C3BD6C29BA88BF0083F008 /* People */,
+				81C3BD6829BA85330083F008 /* Common */,
 				493FBC5F27C4598000F0B245 /* AppDelegate.swift */,
 				493FBC6127C4598000F0B245 /* SceneDelegate.swift */,
-				493FBC6327C4598100F0B245 /* ViewController.swift */,
-				4989CF6C29906A16003CF914 /* ViewModel.swift */,
-				4989CF6E29906AC7003CF914 /* PersonProvider.swift */,
-				4989CF7029906B52003CF914 /* Person.swift */,
-				4989CF7229906C67003CF914 /* Extensions.swift */,
 				493FBC6827C4598100F0B245 /* Assets.xcassets */,
 				493FBC6A27C4598100F0B245 /* LaunchScreen.storyboard */,
 				493FBC6D27C4598100F0B245 /* Info.plist */,
 			);
-			path = drodling;
+			path = Drodling;
+			sourceTree = "<group>";
+		};
+		81C3BD4C29BA83F90083F008 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81C3BD6D29BA8A550083F008 /* PersonCard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		81C3BD6829BA85330083F008 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				81C3BD6929BA853E0083F008 /* Network */,
+				81C3BD4C29BA83F90083F008 /* Views */,
+				4989CF7229906C67003CF914 /* Extensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		81C3BD6929BA853E0083F008 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				81C3BD6A29BA854F0083F008 /* Request.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		81C3BD6C29BA88BF0083F008 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				493FBC6327C4598100F0B245 /* PeopleViewController.swift */,
+				4989CF6C29906A16003CF914 /* PeopleViewModel.swift */,
+				4989CF6E29906AC7003CF914 /* PersonProvider.swift */,
+				4989CF7029906B52003CF914 /* Person.swift */,
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +173,8 @@
 			name = drodling;
 			packageProductDependencies = (
 				49E396C6294788FD00A1FA69 /* SnapKit */,
+				81C3BD4A29BA82C70083F008 /* TinyConstraints */,
+				81C3BD7029BA94C50083F008 /* SkeletonView */,
 			);
 			productName = drodling;
 			productReference = 493FBC5C27C4598000F0B245 /* drodling.app */;
@@ -206,6 +250,8 @@
 			mainGroup = 493FBC5327C4598000F0B245;
 			packageReferences = (
 				49E396C5294788FD00A1FA69 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				81C3BD4929BA82C70083F008 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				81C3BD6F29BA94C50083F008 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = 493FBC5D27C4598000F0B245 /* Products */;
 			projectDirPath = "";
@@ -250,9 +296,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4989CF7129906B52003CF914 /* Person.swift in Sources */,
-				493FBC6427C4598100F0B245 /* ViewController.swift in Sources */,
+				81C3BD6E29BA8A550083F008 /* PersonCard.swift in Sources */,
+				493FBC6427C4598100F0B245 /* PeopleViewController.swift in Sources */,
+				81C3BD6B29BA854F0083F008 /* Request.swift in Sources */,
 				493FBC6027C4598000F0B245 /* AppDelegate.swift in Sources */,
-				4989CF6D29906A16003CF914 /* ViewModel.swift in Sources */,
+				4989CF6D29906A16003CF914 /* PeopleViewModel.swift in Sources */,
 				4989CF6F29906AC7003CF914 /* PersonProvider.swift in Sources */,
 				493FBC6227C4598000F0B245 /* SceneDelegate.swift in Sources */,
 				4989CF7329906C67003CF914 /* Extensions.swift in Sources */,
@@ -430,7 +478,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,7 +506,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -598,6 +646,22 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		81C3BD4929BA82C70083F008 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		81C3BD6F29BA94C50083F008 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -605,6 +669,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 49E396C5294788FD00A1FA69 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		81C3BD4A29BA82C70083F008 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81C3BD4929BA82C70083F008 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+		81C3BD7029BA94C50083F008 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81C3BD6F29BA94C50083F008 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

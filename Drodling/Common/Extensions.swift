@@ -8,8 +8,8 @@
 import UIKit
 
 extension Decodable {
-    static func from(data: Data) throws -> Self {
-        return try JSONDecoder().decode(Self.self, from: data)
+    static func from(jsonData: Data) throws -> Self {
+        return try JSONDecoder().decode(Self.self, from: jsonData)
     }
 }
 
@@ -21,11 +21,7 @@ extension UIView {
 }
 
 extension UIControl {
-    func addAction(for controlEvents: UIControl.Event = .primaryActionTriggered, _ closure: @escaping () -> Void) {
-        addAction(UIAction { (action: UIAction) in closure() }, for: controlEvents)
-    }
-
-    func addAsyncAction(for controlEvents: UIControl.Event = .primaryActionTriggered, _ closure: @escaping () async ->  Void) {
+    func addAction(for controlEvents: UIControl.Event = .primaryActionTriggered, _ closure: @escaping () async ->  Void) {
         let action = UIAction { action in
             Task {
                 await closure()
